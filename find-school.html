@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find My School — Choose your preferences</title>
+  <meta name="description" content="Compare schools by budget, distance, environment, facilities and essential information — all in one place.">
+  <meta name="theme-color" content="#0f2744">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="finder-page">
+  <a class="skip-link" href="#finder">Skip to School Finder</a>
+
+  <!-- 1. Navigation -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a href="index.html#home" class="brand"><img src="logo.svg" alt="Find My School — home" width="236" height="48"></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰ Menu</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="#finder">Find My School</a></li>
+        <li><a href="index.html#explore">Explore Schools</a></li>
+        <li><a href="index.html#how-it-works">How matching works</a></li>
+        <li><a href="#finder" class="btn btn-primary">Find My School</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">For parents · Free to use</span>
+          <h1 id="hero-title">Find a school that <span>fits your family.</span></h1>
+          <p class="lead">Compare schools by budget, distance, environment, facilities and essential information — all in one place.</p>
+          <div class="hero-actions">
+            <a href="#finder" class="btn btn-primary btn-large">Find My School</a>
+            <a href="index.html#explore" class="btn btn-outline btn-large">Explore Schools</a>
+          </div>
+          <ul class="hero-points">
+            <li>Personalised matches</li>
+            <li>Fees &amp; distance</li>
+            <li>All info in one place</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-photo"><img src="./images/green-valley.png" alt=""></div>
+          <div class="float-card float-fee">
+            <strong>Green Valley School</strong>
+            <span class="muted">📍 2.1 km · 💰 Rs. 12,000/mo</span>
+          </div>
+          <div class="float-card float-match">
+            <span class="match-circle" aria-hidden="true">✓</span>
+            <div><strong>Example match</strong>Fits your budget and distance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-method" id="how-it-works" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="method-title">How your shortlist is ranked</h2>
+          <p>Recommendations use a fixed, transparent score based on the preferences you choose.</p>
+        </div>
+        <div class="method-grid">
+          <article class="method-item"><span>01</span><h3>Monthly budget</h3><p>Schools closer to your fee range score higher.</p><strong>35% of score</strong></article>
+          <article class="method-item"><span>02</span><h3>Travel distance</h3><p>Schools closer to your selected distance score higher.</p><strong>30% of score</strong></article>
+          <article class="method-item"><span>03</span><h3>Your priorities</h3><p>Selected priorities are compared with each school's sample details.</p><strong>35% of score</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Find My School -->
+    <section class="section section-gray" id="finder" aria-labelledby="finder-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="finder-title">Find a school that matches your needs</h2>
+          <p>Tell us what matters most to your family.</p>
+        </div>
+
+        <form class="finder" id="finder-form" novalidate>
+          <fieldset>
+            <legend><span class="step-num">1</span>Monthly Budget</legend>
+            <p class="hint">How much can you spend on tuition each month?</p>
+            <div class="options options-4">
+              <label class="option"><input type="radio" name="budget" value="0"><span class="option-body"><span class="option-title">Rs. 10k–15k</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="budget" value="1"><span class="option-body"><span class="option-title">Rs. 15k–20k</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="budget" value="2"><span class="option-body"><span class="option-title">Rs. 20k–30k</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="budget" value="3"><span class="option-body"><span class="option-title">Rs. 30k+</span><span class="option-check">✓ Selected</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="step-num">2</span>Maximum Travel Distance</legend>
+            <p class="hint">How far from home can your child travel?</p>
+            <div class="options options-4">
+              <label class="option"><input type="radio" name="distance" value="0"><span class="option-body"><span class="option-title">Within 2 km</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="distance" value="1"><span class="option-body"><span class="option-title">Within 5 km</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="distance" value="2"><span class="option-body"><span class="option-title">Within 10 km</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="radio" name="distance" value="3"><span class="option-body"><span class="option-title">Any distance</span><span class="option-check">✓ Selected</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="step-num">3</span>What matters most?</legend>
+            <p class="hint">Choose as many as you like.</p>
+            <div class="options options-3">
+              <label class="option"><input type="checkbox" name="priority" value="affordable"><span class="option-body"><span class="option-icon" aria-hidden="true">💰</span><span class="option-title">Affordable</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="checkbox" name="priority" value="close"><span class="option-body"><span class="option-icon" aria-hidden="true">📍</span><span class="option-title">Close to home</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="checkbox" name="priority" value="teaching"><span class="option-body"><span class="option-icon" aria-hidden="true">👩‍🏫</span><span class="option-title">Good teaching</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="checkbox" name="priority" value="safe"><span class="option-body"><span class="option-icon" aria-hidden="true">🌳</span><span class="option-title">Safe environment</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="checkbox" name="priority" value="sports"><span class="option-body"><span class="option-icon" aria-hidden="true">⚽</span><span class="option-title">Activities &amp; sports</span><span class="option-check">✓ Selected</span></span></label>
+              <label class="option"><input type="checkbox" name="priority" value="facilities"><span class="option-body"><span class="option-icon" aria-hidden="true">🏫</span><span class="option-title">Good facilities</span><span class="option-check">✓ Selected</span></span></label>
+            </div>
+          </fieldset>
+
+          <p class="form-error" id="finder-error" role="alert" tabindex="-1" hidden></p>
+
+          <div class="finder-submit">
+            <button type="submit" class="btn btn-primary btn-large">🔍 Find My School</button>
+            <small>Match scores are a simple demo calculation, not an official rating.</small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. Recommended Schools -->
+    <section class="section results-section" id="recommended" aria-labelledby="recommended-title" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="recommended-title" tabindex="-1">Schools that match your preferences</h2>
+          <p>Our top 3 picks for your family.</p>
+        </div>
+        <p class="results-summary" id="results-summary"></p>
+        <div class="cards" id="results-grid" aria-live="polite"></div>
+        <div class="results-actions">
+          <a href="#finder" class="btn btn-outline">Change my preferences</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Schools -->
+    <section class="section section-gray" id="explore" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="explore-title">Explore Schools</h2>
+          <p>Browse every school and narrow down the list.</p>
+          <span class="demo-note">Sample schools for this prototype</span>
+        </div>
+
+        <div class="explore-tools">
+          <div>
+            <label class="search-label" for="school-search">Search by school name or location</label>
+            <input class="search-input" type="search" id="school-search" placeholder="e.g. Green Valley or DHA" autocomplete="off">
+          </div>
+          <div class="filter-row" role="group" aria-labelledby="f-budget">
+            <span class="filter-label" id="f-budget">💰 Budget</span>
+            <button type="button" class="chip" data-filter="budget" data-value="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter="budget" data-value="low" aria-pressed="false">Under Rs. 15k</button>
+            <button type="button" class="chip" data-filter="budget" data-value="mid" aria-pressed="false">Rs. 15k–25k</button>
+            <button type="button" class="chip" data-filter="budget" data-value="high" aria-pressed="false">Above Rs. 25k</button>
+          </div>
+          <div class="filter-row" role="group" aria-labelledby="f-distance">
+            <span class="filter-label" id="f-distance">📍 Distance</span>
+            <button type="button" class="chip" data-filter="distance" data-value="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter="distance" data-value="near" aria-pressed="false">Within 3 km</button>
+            <button type="button" class="chip" data-filter="distance" data-value="medium" aria-pressed="false">Within 7 km</button>
+          </div>
+          <div class="filter-row" role="group" aria-labelledby="f-system">
+            <span class="filter-label" id="f-system">🎓 Education System</span>
+            <button type="button" class="chip" data-filter="system" data-value="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter="system" data-value="matric" aria-pressed="false">Matric</button>
+            <button type="button" class="chip" data-filter="system" data-value="cambridge" aria-pressed="false">Cambridge</button>
+          </div>
+        </div>
+
+        <p class="explore-count" id="explore-count" aria-live="polite"></p>
+        <div class="cards" id="explore-grid"></div>
+      </div>
+    </section>
+
+    <!-- 5. School Details -->
+    <section class="section" id="details" aria-label="School details">
+      <div class="container" id="details-content">
+        <div class="details-placeholder">
+          <div class="big" aria-hidden="true">🏫</div>
+          <h3>School details will appear here</h3>
+          <p>Press <strong>View School</strong> on any school card to see fees, classes, facilities, photos and events.</p>
+          <div class="hero-actions">
+            <a href="#finder" class="btn btn-primary">Find My School</a>
+            <a href="index.html#explore" class="btn btn-outline">Explore Schools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo"><img src="logo.svg" alt="Find My School" width="177" height="36"></span>
+          <p>Helping parents find schools based on what matters to their family — with the essential information in one place.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="#finder">Find My School</a></li>
+            <li><a href="index.html#explore">Explore Schools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Coming soon</h4>
+          <ul>
+            <li>Verified Parent Reviews <span class="future-pill">Future</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© <span id="year"></span> Find My School · Demonstration website. School records, fees, distances and events are fictional.</p>
+    </div>
+  </footer>
+
+  <div class="search-loading" id="search-loading" role="dialog" aria-modal="true" aria-labelledby="loading-title" aria-describedby="loading-copy" hidden>
+    <div class="loading-panel">
+      <span class="loading-kicker">A little patience</span>
+      <h2 id="loading-title">Your preferences are being searched.<br>Hold on, please.</h2>
+      <p id="loading-copy">We’re comparing the sample schools with your choices.</p>
+      <div class="writing-track" aria-hidden="true">
+        <svg class="writing-animation" viewBox="0 0 520 72" preserveAspectRatio="none">
+          <path class="writing-ink" pathLength="1" d="M16 45 C80 14 120 18 170 38 S255 65 315 40 S430 15 500 43"/>
+          <g class="writing-pencil">
+            <path d="M-52-6H-12L0 0-12 6H-52Z" fill="#557b60" stroke="#3f624b" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M0 0-12-6V6Z" fill="#e4bc89" stroke="#bd9364" stroke-width="1" stroke-linejoin="round"/>
+            <path d="M0 0-4-1.7V1.7Z" fill="#344239"/>
+            <path d="M-48-5V5" stroke="#d68c82" stroke-width="3" stroke-linecap="round"/>
+            <animateMotion dur="1.4s" repeatCount="indefinite" rotate="auto" path="M16 45 C80 14 120 18 170 38 S255 65 315 40 S430 15 500 43"/>
+          </g>
+        </svg>
+      </div>
+      <div class="loading-skeletons" aria-hidden="true">
+        <div class="loading-skeleton"><span class="skeleton-photo"></span><span class="skeleton-line long"></span><span class="skeleton-line"></span></div>
+        <div class="loading-skeleton"><span class="skeleton-photo"></span><span class="skeleton-line long"></span><span class="skeleton-line"></span></div>
+        <div class="loading-skeleton"><span class="skeleton-photo"></span><span class="skeleton-line long"></span><span class="skeleton-line"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
